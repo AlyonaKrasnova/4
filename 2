@@ -1,0 +1,15 @@
+srand(time(0));
+
+int n;
+cout « "Введите количество элементов в массиве: "; cin » n; cout « endl;
+int* mas = new int[n + 1];
+
+mas[1] = rand() % n + 1;
+cout « mas[1] « endl;
+for (int i = 2; i <= n; i++)
+{
+do
+mas[i] = rand() % n + 1;
+while (mas[i] == mas[i - 1]);
+cout « mas[i] « endl;
+} 
